@@ -1,0 +1,396 @@
+  <!DOCTYPE html>
+  <html lang="en" ng-app="dw">
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+                        
+    <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <title>Heroic Features - Start Bootstrap Template</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom styles for this template -->
+      <link href="css/heroic-features.css" rel="stylesheet">
+      <link href="test3css.css" rel="stylesheet">
+
+    </head>
+
+      <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#"><img src="download.png" alt="Smiley face" height="30" width="100"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Symptom Checker</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="modal" data-target="#login-modal">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--login part-->
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h1>Login to Your Account</h1><br>
+          <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
+          
+          <div class="login-help">
+          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+       <!-- Page Content -->
+      <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+          <h1 class="display-3">MEDIPLUS</h1>
+          <p class="lead"></p>
+
+<!--modal button-->
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary">Register Free</a>
+<!--main modal-->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                
+                <h4 class="modal-title"  >Choose</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              </div><div class="container"></div>
+              <div class="modal-body">
+               
+                <a data-toggle="modal" href="#myModal2" class="btn btn-primary">User registration </a>
+                <a data-toggle="modal" href="#myModal3" class="btn btn-primary" style="float:right;">Doctor registration</a>
+              </div>
+              
+            </div>s
+          </div>
+      </div>
+      <!-- modal 1-->
+      <div class="modal" id="myModal2" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="container"></div>
+              <div class="modal-body">
+                   
+
+                   <!--form patient-->
+                     <div class="container">
+              <form class="form-horizontal" role="form" action="register.php" method="GET">
+              
+                  <h4>Registration Form</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <div class="form-group">
+                      <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                      <div class="col-sm-9">
+                          <input type="text" id="name" name = "name" placeholder="Full Name" class="form-control" autofocus>
+                          <!--<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>-->
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="email" class="col-sm-3 control-label">Email</label>
+                      <div class="col-sm-9">
+                          <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                      </div>
+                  </div>
+
+                  <label for="password" class="col-sm-3 control-label">Password</label>
+                      
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                      </div>
+                    </div>
+                  
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                      <div class="col-sm-9">
+                          <input type="date" id="dob" name="dob" class="form-control">
+                      </div>
+                  </div>
+               
+                  <div class="form-group">
+                      <label class="control-label col-sm-3">Gender</label>
+                      <div class="col-sm-6">
+                          <div class="row">
+                              <div class="col-sm-4">
+                                  <label class="radio-inline">
+                                      <input type="radio" name="gender" id="femaleRadio" value="f">Female
+                                  </label>
+                              </div>
+                              <div class="col-sm-4">
+                                  <label class="radio-inline">
+                                      <input type="radio" name = "gender" id="maleRadio" value="m">Male
+                                  </label>
+                              </div>
+                         </div>
+                      </div>
+                  </div>
+                   <!-- /.form-group -->
+                  Address
+                  
+
+
+                  <div class="dropdown" ng-controller = "Ctrl3">
+                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" > -->
+                      State
+                    <!-- </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                     -->  
+                     <select name= "State"  value="state" ng-model = "select_state" ng-options = "x for x in empno" ng-change="see1()">
+                     <option value="None">None</option>   
+                      </select>
+                      <br>
+
+                      District
+                      <select name= "State"  value="state" ng-model = "select_district" ng-options = "x for x in district" ng-change="see1()">
+                     <option value="None">None</option>   
+                      </select>
+
+                    </div>
+                  </div>
+                  <br><br>
+                  <div class="form-group col-md-6 col-sm-6">
+                      <label for="mobile">Mobile</label>
+                      <input type="text" id="phone" name="phone" class="form-control input-sm" id="mobile" placeholder="">
+                  </div>
+                
+                  <div class="form-group">
+                      <div class="col-sm-9 col-sm-offset-3">
+                          <button type="submit" class="btn btn-primary btn-block">Register</button>
+                      </div>
+                  </div>
+              </form> <!-- /form -->
+          </div> <!-- ./container -->
+          <!--form end-->
+              </div>
+              
+            </div>
+          </div>
+      </div>
+
+
+      <!--modal 2-->
+      <div class="modal" id="myModal3" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="container"></div>
+              <div class="modal-body">
+                <!--doctor form -->
+                 <div class="container">
+              <form class="form-horizontal" role="form">
+              
+                  <h4>Registration Form</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <div class="form-group">
+                      <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                      <div class="col-sm-9">
+                          <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+                          <!--<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>-->
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="email" class="col-sm-3 control-label">Email</label>
+                      <div class="col-sm-9">
+                          <input type="email" id="email" placeholder="Email" class="form-control">
+                      </div>
+                  </div>
+                  
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                      <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                </div>
+
+
+                  <div class="form-group">
+                      <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                      <div class="col-sm-9">
+                          <input type="date" id="birthDate" class="form-control">
+                      </div>
+                  </div>
+              
+                  <div class="form-group">
+                      <label class="control-label col-sm-3">Gender</label>
+                      <div class="col-sm-6">
+                          <div class="row">
+                              <div class="col-sm-4">
+                                  <label class="radio-inline">
+                                      <input type="radio" id="femaleRadio" value="Female">Female
+                                  </label>
+                              </div>
+                              <div class="col-sm-4">
+                                  <label class="radio-inline">
+                                      <input type="radio" id="maleRadio" value="Male">Male
+                                  </label>
+                              </div>
+                              <div class="col-sm-4">
+                                  <label class="radio-inline">
+                                      <input type="radio" id="uncknownRadio" value="Unknown">Unknown
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div> <!-- /.form-group -->
+                  
+                
+                  <div class="form-group">
+                      <div class="col-sm-9 col-sm-offset-3">
+                          <button type="submit" class="btn btn-primary btn-block">Register</button>
+                      </div>
+                  </div>
+              </form> <!-- /form -->
+          </div> <!-- ./container -->
+          <!--form end-->
+              </div>
+              
+            </div>
+          </div>
+      </div>
+    
+         
+      </header>
+        <div class="modal" id="myModal3" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Second Modal title</h4>
+          </div>
+          <div class="modal-body">
+            Content for the dialog / modal goes here.
+          </div>
+          <div class="modal-footer">
+            <a href="#" data-dismiss="modal" class="btn">Close</a>
+            <a href="#" class="btn btn-primary">Save changes</a>
+          </div>
+        </div>
+      </div>
+  </div>
+        
+
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card c1">
+              <img class="card-img-top" src="https://www.cloudally.com/wp-content/uploads/2013/12/Features.jpg" alt="">
+              <div class="card-body">
+                
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Find Out More!</a>
+              </div>
+            </div>
+          </div>
+
+         <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Find Out More!</a>
+              </div>
+            </div>
+          </div>
+
+         <!-- x <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Find Out More!</a>
+              </div>
+            </div>
+          </div>
+
+         > <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Find Out More!</a>
+              </div>
+            </div>
+          </div>-->
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+  </html>

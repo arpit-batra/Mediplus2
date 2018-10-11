@@ -1,0 +1,389 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+    <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <title>Heroic Features - Start Bootstrap Template</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom styles for this template -->
+      <link href="css/heroic-features.css" rel="stylesheet">
+      <link href="test3css.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:700|Patua+One|Roboto+Condensed:700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+       <script type="text/javascript" src="angular.js"></script>
+       <script type="text/javascript" src="js_symptom/app.js"></script>
+       <script type="text/javascript" src="js_login/app2.js"></script>
+       <script type="text/javascript">var rootApp = angular.module('rootApp',['symptom','log'])</script>
+
+       <style type="text/css">
+       #classModal {}
+
+       .modal-body {
+         overflow-x: auto;
+       }       
+       </style>
+
+    </head>
+
+    <body >
+
+     <!-- Navigation -->
+     <div ng-app="symptom" ng-controller="Ctrl">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#"><img src="download.png" alt="Smiley face" height="30" width="100"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index2.html">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Symptom Checker</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="modal" data-target="#login-modal">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </nav>
+<!--form-->
+         <div class="container-fluid">
+          <div class="row" style="height:80%; display: block;">
+              
+                    <div class="card">
+                        
+                        <div class="card-block">
+                       <!--form-->
+                       <section id="contact" class="content-section text-center">
+            <div class="contact-section">
+                <div class="container">
+                  <h2>Symptom checker</h2>
+                  <p>Enter your symptoms and we will tell you  most probable diseases you might be suffering from. </p>
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <label for="exampleInputName2">Age</label>
+                          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">  
+                          <label for="exampleInputEmail2">Gender</label>
+                          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        </div>
+                        <div class="form-group ">symptom1
+                          <select name= "symptom1"  value="symptom1" ng-model = "select_symptom1" ng-options = "x for x in symptoms">
+                         <option value="None">None</option>   
+                          </select>
+                        </div>
+                         <div class="form-group ">symptom2
+                          <select name= "symptom2"  value="symptom2" ng-model = "select_symptom2" ng-options = "x for x in symptoms">
+                         <option value="None">None</option>   
+                          </select>
+                        </div>
+                         <div class="form-group ">symptom3
+                          <select name= "symptom3"  value="symptom3" ng-model = "select_symptom3" ng-options = "x for x in symptoms">
+                         <option value="None">None</option>   
+                          </select>
+                        </div>
+                         <div class="form-group ">symptom4
+                          <select name= "symptom4"  value="symptom4" ng-model = "select_symptom4" ng-options = "x for x in symptoms">
+                         <option value="None">None</option>   
+                          </select>
+                        </div>
+                         <div class="form-group ">symptom5
+                          <select name= "symptom5"  value="symptom5" ng-model = "select_symptom5" ng-options = "x for x in symptoms">
+                         <option value="None">None</option>   
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-default" ng-click="submit()" data-toggle="modal" data-target="#exampleModalLong">Submit</button>
+                      </form>
+
+
+                     
+                      <!-- <br>
+                      <br>
+                  <form>
+
+                    SELECT DISEASE :
+                    <select name= "diseases"  value="diseases" ng-model = "select_disease" ng-options = "x for x in list_diseases">
+                   <option value="None" align = "right">None</option>
+                  </form> -->
+
+
+
+
+                </div>
+            </div><!--formend-->
+
+                        </div>
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+           
+       <!--     <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <p class="card-block">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam velit quisquam veniam excepturi temporibus inventore corporis dicta sit culpa veritatis placeat earum, dolorum asperiores, delectus dolore voluptatibus, at magnam nobis!
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                    <div class="card-block">
+                        <figure class="profile">
+                            <img src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif" class="profile-avatar" alt="">
+                        </figure>
+                        <h4 class="card-title mt-3">Tawshif Ahsan Khan</h4>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="card-text">
+                            Tawshif is a web designer living in Bangladesh.
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                        <button class="btn btn-secondary float-right btn-sm">show</button>
+                    </div>
+                </div>
+            </div>-->
+      
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          
+          <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Possible diseases</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              
+              <!-- <select name= "symptom3"  value="symptom3" ng-model = "select_symptom3" ng-options = "x for x in diseases">
+                     <option value="None">None</option>   
+                </select> -->
+               <!--  <button ng-click="submit()" data-toggle="modal2" data-target="#modal2">see_All</button> -->
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" ng-click="submit()">
+                  Launch demo modal
+                </button> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#classModal">
+                  Launch demo modal
+                </button>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3 ng-repeat="x in d">
+                  {{x}} : {{s[$index]}}
+                </h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        
+
+      SELECT DISEASE :
+          <select name= "diseases"  value="diseases" ng-model = "select_disease" ng-options = "x for x in list_diseases">
+          <option value="None" align = "right">None</option>  
+          <input type= "button" ng-click = "get_all_diseases()" data-toggle="modal" data-target="#myModal">
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script type="text/javascript">$(function () {
+  $('[data-toggle="popover"]').popover()
+})</script>
+
+
+  <!-- see the table in a modal -->
+
+
+  
+
+  <div id="classModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="classInfo" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×
+          </button>
+          <h4 class="modal-title" id="classModalLabel">
+                Possible diseases
+              </h4>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Medicine</th>
+                <th scope="col">Severity</th>
+                <th scope="col">commonness</th>
+                <th scope="col">time to recover</th>
+                <th scope="col">home_remedies</th>
+                <th scope="col">symptom1</th>
+                <th scope="col">symptom2</th>
+                <th scope="col">symptom3</th>
+                <th scope="col">symptom4</th>
+                <th scope="col">symptom5</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr ng-repeat = "x in d">
+                <td>{{x}}</td>
+                <td>{{s[$index]}}</td>
+                <td>{{severity[$index]}}
+                </td>
+                <td>
+                  {{commoness[$index]}}
+                  </td>
+                <td>{{time_to_recover[$index]}}</td>
+                <td>{{home_remedies[$index]}}</td>
+                <td>{{symptom1[$index]}}</td>
+                <td>{{symptom2[$index]}}</td>
+                <td>{{symptom3[$index]}}</td>
+                <td>{{symptom4[$index]}}</td>
+                <td>{{symptom5[$index]}}</td>
+                <td><button ng-click="know_disease($index)">Delete</button></td>
+
+                <td>
+                  
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Medicine</th>
+                <th scope="col">Severity</th>
+                <th scope="col">commonness</th>
+                <th scope="col">time to recover</th>
+                <th scope="col">home_remedies</th>
+                <th scope="col">symptom1</th>
+                <th scope="col">symptom2</th>
+                <th scope="col">symptom3</th>
+                <th scope="col">symptom4</th>
+                <th scope="col">symptom5</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>{{x1}}</td>
+                <td>{{s1}}</td>
+                <td>{{severity1}}</td>
+                <td>{{commoness1}}</td>
+                <td>{{time_to_recover1}}</td>
+                <td>{{home_remedies1}}</td>
+                <td>{{symptom11}}</td>
+                <td>{{symptom21}}</td>
+                <td>{{symptom31}}</td>
+                <td>{{symptom41}}</td>
+                <td>{{symptom51}}</td>
+                <td>
+                  
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    
+</div>
+  </body>
+
+</html>
